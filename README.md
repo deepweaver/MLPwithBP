@@ -1,9 +1,9 @@
-### run
+# run
 - run a network with one hidden layer, execute `python3 ./BPN.py`
-- run a network with tow hidden layer, execute `python3 ./BPN_momentum.py`
+- run a network with two hidden layer, execute `python3 ./BPN_momentum.py`
   
-### result
-command `python3 ./BPN_momentum.py` generated result can be found in `network_output.txt`
+# results
+command `python3 ./BPN_momentum.py` generated results can be found in `network_output.txt`
 ```
 accuracy of trainset = 0.98%
 accuracy of validationset = 0.76%
@@ -11,7 +11,7 @@ testset accuracy is = 0.73%
 ```
 
 
-### explanation
+# explanation
 ## data preprocessing
 in `utils.py`, function `Preprocessing(data, target):` , basicly, `def LoadData(filepath):` loads the csv file and convert it (randomly) into a data list and a test list. Then feed the return value, which is `data` and `target` into `Preprocessing(data, target):`, in which I use `processeddata = scale(np.array(data),-1,1)` to scale all the input data into range [-1,1]. I also in this function, convert the target list into one-hot vectors.
 without random shuffling, the accuracy is only 42%
